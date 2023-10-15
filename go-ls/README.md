@@ -14,11 +14,18 @@ Go must be installed.
 
 
 #### Steps 
+1. Compile and install binary into go/bin directory.
 ```
-cd go-ls
+cd go-ls && go install .
+```
 
+2. Identify location where go binaries are installed on your machine and copy it!
+```
+go env GOPATH
 ```
 
+3. To use `go-ls` on the command line, add the following to your  `~/.zshrc`, replacing the path with the path outputte from the previous command.
 ```
-go install .
+export PATH=$PATH:/path/to/your/go/bin
 ```
+5. Then open a new terminal window and `go-ls` will be available for you to use. 
